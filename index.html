@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FCC - Survey Form</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div id="container">
+        <header>
+            <h1 id="title">freeCodeCamp Survey Form</h1>
+            <p id="description">Thank you for taking our survey and helping us improve the platform.</p>
+        </header>
+        <main>
+            <form action="" id="survey-form">
+                <fieldset>
+                    <legend>Basic Data</legend>
+                    <label for="name" id="name-label">Name</label>
+                    <input type="text" id="name" placeholder="Enter your full name" maxlength="255" required>
+                    <label for="email" id="email-label">E-mail</label>
+                    <input type="email" id="email" placeholder="email@server.com" maxlength="255" required>
+                    <label for="tel">Phone</label>
+                    <input type="tel" id="tel" placeholder="(11) 98765-4321" maxlength="20" required>
+                    <label for="number" id="number-label">Age</label>
+                    <input type="number" id="number" min="5" max="99" placeholder="Enter your age" maxlength="2"
+                        required>
+                    <fieldset>
+                        <legend>Sex</legend>
+                        <span>
+                            <label for="male">Male</label>
+                            <input type="radio" name="sex" value="male">
+                        </span>
+                        <span>
+                            <label for="female">Female</label>
+                            <input type="radio" name="sex" value="female">
+                        </span>
+                        <span>
+                            <label for="nb">Non binary</label>
+                            <input type="radio" name="sex" value="nb">
+                        </span>
+                        <span>
+                            <label for="other">Other</label>
+                            <input type="radio" name="sex" value="other">
+                        </span>
+                    </fieldset>
+                </fieldset>
+                <fieldset>
+                    <legend>Professional Data</legend>
+                    <label for="dropdown">Interests</label>
+                    <select name="dropdown" id="dropdown">
+                        <option disabled>Pick</option>
+                        <option value="front">Front-end</option>
+                        <option value="back">Back-end</option>
+                        <option value="full">Full-stack</option>
+                        <option value="other">Other</option>
+                    </select>
+                    <fieldset>
+                        <legend>Experience</legend>
+                        <span>
+                            <label for="html">HTML</label>
+                            <input type="checkbox" id="html" name="experience" value="html">
+                        </span>
+                        <span>
+                            <label for="css">CSS</label>
+                            <input type="checkbox" id="css" name="experience" value="css">
+                        </span>
+                        <span>
+                            <label for="js">JavaScript</label>
+                            <input type="checkbox" id="js" name="experience" value="js">
+                        </span>
+                        <span>
+                            <label for="nodejs">Node.js</label>
+                            <input type="checkbox" id="nodejs" name="experience" value="nodejs">
+                        </span>
+                        <span>
+                            <label for="mongodb">MongoDB</label>
+                            <input type="checkbox" id="mongodb" name="experience" value="mongodb">
+                        </span>
+                        <span>
+                            <label for="other">Other</label>
+                            <input type="checkbox" id="other" name="experience" value="other">
+                        </span>
+                    </fieldset>
+                </fieldset>
+                <fieldset>
+                    <legend>Comments</legend>
+                    <textarea name="comments" id="comments" cols="30" rows="10" wrap="soft"
+                        placeholder="Write your comments here"></textarea>
+                </fieldset>
+                <button type="submit" id="submit">Send</button>
+                <button type="reset">Clear</button>
+            </form>
+        </main>
+    </div>
+    <footer>2022 Gustavo Adrien Polli - Background Image &copy; Unsplash</footer>
+    <script type="text/javascript" src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js">
+    </script>
+</body>
+</html>

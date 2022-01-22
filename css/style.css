@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+:root {
+    --color-text: #FFFFFF;
+    --color-primary: #F5261A;
+    --color-primary-alpha: rgba(245, 38, 26, 0.5);
+    --color-primary-shadow: #A81109;
+    --color-secondary: #FF4036;
+    --color-secondary-alpha: rgba(255, 64, 54, 0.5);
+    --color-complementary: #1BF56E;
+    --color-complementary-shadow: #00A840;
+    margin: 0;
+}
+
+body {
+    background: var(--color-secondary);
+    background-image: linear-gradient(
+      45deg,
+      rgba(245, 38, 26, 0.5),
+      rgba(255, 64, 54, 0.5)
+    ),
+    url(https://images.unsplash.com/photo-1639230464573-a1bae9ff0996?crop=entropy&cs=srgb&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTY0MTE3ODczNA&ixlib=rb-1.2.1&q=85);
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: -1;
+    width: 95vw;
+    height: 100%;
+    margin: 0 auto;
+}
+
+#description {
+    font-family: 'Roboto', sans-serif;
+}
+
+#container {
+    background-color: var(--color-primary-alpha);
+    box-shadow: 3px 3px 3px var(--color-primary-shadow);
+    text-align: center;
+    margin: auto;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 1px var(--color-primary-shadow);
+    color: var(--color-text);
+    padding: 5px;
+    grid-area: container;
+}
+
+header {
+    grid-area: header;
+}
+
+footer {
+    width: 100vw;
+    text-align: center;
+    color: var(--color-text);
+    text-shadow: 2px 2px 1px var(--color-primary-shadow);
+    background-color: var(--color-primary);
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    grid-area: footer;
+}
+
+form {
+    display: grid;
+    grid-template-areas: "header" "container" "footer";
+}
+
+form fieldset {
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+fieldset fieldset {
+    margin: 0 auto;
+    width: 70vw;
+    flex-direction: row;
+}
+
+form button {
+    margin-bottom: 10px;
+    color: var(--color-text);
+    text-shadow: 2px 2px 1px var(--color-secondary-shadow);
+    background-color: var(--color-secondary);
+    box-shadow: 3px 3px 3px var(--color-primary-shadow);
+}
+
+form button:hover {
+    background-color: var(--color-complementary);
+}
+
+form fieldset {
+    border-color: var(--color-complementary);
+    box-shadow: 3px 3px 3px var(--color-primary-shadow);
+}
+
+fieldset legend {
+    font-variant: small-caps;
+    color: var(--color-text);
+    text-shadow: 2px 2px 2px var(--color-primary-shadow);
+}
+
+fieldset input, select, textarea {
+    width: 70%;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    padding: 0;
+}
+
+fieldset legend, label {
+    text-align: start;
+}
+
+form button {
+    width: 50%;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+
+@media only screen and (max-width: 500px) {
+    form {
+        width: 90vw;
+    }
+
+    form fieldset {
+        display: block;
+    }
+
+    fieldset input {
+        display: flex;
+    }
+}
